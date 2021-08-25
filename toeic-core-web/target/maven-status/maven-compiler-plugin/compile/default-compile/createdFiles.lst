@@ -1,0 +1,3 @@
+vn\nacl\core\web\common\WebConstant.class
+vn\nacl\core\web\command\AsbtractCommand.class
+vn\nacl\core\web\utils\FormUtil.class

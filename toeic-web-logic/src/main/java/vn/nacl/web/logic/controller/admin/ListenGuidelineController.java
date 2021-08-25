@@ -17,9 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.ResourceBundle;
-import java.util.Set;
+import java.util.*;
 
 //@WebServlet("/admin-guideline-listen-list.html")
 @WebServlet(urlPatterns = {"/admin-guideline-listen-list.html", "/admin-guideline-listen-edit.html"})
@@ -61,11 +59,18 @@ public class ListenGuidelineController extends HttpServlet {
         UploadUtil uploadUtil= new UploadUtil();
         ResourceBundle resourceBundle= ResourceBundle.getBundle("ApplicationResources");
         HttpSession session=request.getSession();
-        Set<String> valueTitle= new HashSet<String>();
-        valueTitle.add("pojo.title");
-        valueTitle.add("pojo.content");
+        Set<String> valueTitle= buildSetValueListenguideLine();
+
         try {
             Object[] objects= uploadUtil.writeOrUpdateFile(request, valueTitle, WebConstant.LISTENGUIDELINE);
+            Map<String,String> mapValue= (Map<String, String>) objects[3];
+            command=returnValueListenguideLine(valueTitle, command, mapValue);
+            for (String item: valueTitle){
+                if(mapValue.containsKey(item)){
+                    if (item.equals("pojo.title")) command.getPojo().setTitle(mapValue.get(item));
+                    else if (item.equals("pojo.content")) command.getPojo().setContent(mapValue.get(item));
+                }
+            }
             session.setAttribute(WebConstant.ALERT, WebConstant.TEST_SUCCESS);
             session.setAttribute(WebConstant.MESSAGE_RESPONSE, resourceBundle.getString("label.guideline.listen.add.success"));
         }catch (FileUploadException e){
@@ -79,5 +84,22 @@ public class ListenGuidelineController extends HttpServlet {
         }
         response.sendRedirect("/admin-guideline-listen-list.html?urlType=url-list");
 
+    }
+
+    private ListenGuideCommand returnValueListenguideLine(Set<String> valueTitle, ListenGuideCommand command, Map<String,String> mapValue) {
+        for (String item: valueTitle){
+            if(mapValue.containsKey(item)){
+                if (item.equals("pojo.title")) command.getPojo().setTitle(mapValue.get(item));
+                else if (item.equals("pojo.content")) command.getPojo().setContent(mapValue.get(item));
+            }
+        }
+        return command;
+    }
+
+    private Set<String> buildSetValueListenguideLine() {
+        Set<String> value= new HashSet<String>();
+        value.add("pojo.title");
+        value.add("pojo.content");
+        return value;
     }
 }

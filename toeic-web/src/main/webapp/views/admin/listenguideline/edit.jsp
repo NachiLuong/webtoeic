@@ -61,10 +61,30 @@
                             </div>
                         </div>
                     </form>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <p>hahahahaa</p>
+                            <p>hahahahaa</p>
+                            <p>hahahahaa</p>
+                            <h2>HE</h2>
+                            <input type="submit" class="btn btn-white btn-warning btn-bold"/>"/>
+                            <button>Click me</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script >
+    $(document).ready(function (){
+        hideAllWhenButton();
+    });
+    function hideAllWhenButton(){
+        $(button).click(function (){
+           $(p).hide();
+        });
+    }
+</script>
 </body>
 </html>

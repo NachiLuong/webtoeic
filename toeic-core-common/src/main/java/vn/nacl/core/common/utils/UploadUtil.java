@@ -4,6 +4,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.lang.StringUtils;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -45,14 +46,17 @@ public class UploadUtil {
         for(FileItem item:items){
             if(!item.isFormField()){
                 String fileName=item.getName();
-                File upLoadFile= new File(address + File.separator+ path + File.separator + fileName);
-                System.out.println(address+ File.separator+ path + File.separator);
-                boolean isExist=upLoadFile.exists();
-                if(isExist){
-                    if(upLoadFile.delete()) check=true;
-                    else check=false;
+                if(StringUtils.isNotBlank(fileName)){
+                    File upLoadFile= new File(address + File.separator+ path + File.separator + fileName);
+                    fileLocation=address + File.separator+ path + File.separator + fileName;
+                    name=fileName;
+                    boolean isExist=upLoadFile.exists();
+                    if(isExist){
+                        if(upLoadFile.delete()) check=true;
+                        else check=false;
+                    }
+                    item.write(upLoadFile);
                 }
-                item.write(upLoadFile);
             }
             else {
                 if(titleValue!=null){

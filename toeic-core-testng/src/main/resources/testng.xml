@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestAll">
+    <test name="case1">
+        <classes>
+            <class name="vn.nacl.core.testng.TesyRole" />
+            <class name="vn.nacl.core.testng.ListenGuidelineTest" />
+            <class name="vn.nacl.core.testng.LoginTest" />
+        </classes>
+    </test>
+</suite>

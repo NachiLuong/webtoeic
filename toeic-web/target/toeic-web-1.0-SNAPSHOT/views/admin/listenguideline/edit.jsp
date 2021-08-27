@@ -32,39 +32,87 @@
                                 ${messageResponse}
                         </div>
                     </c:if>
-                    <form action="${formUrl}" method="post" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right"><fmt:message key="label.guideline.title" bundle="${lang}"/></label>
-                            <div class="col-sm-9">
-                                <input type="text" name="pojo.title"/>
-                            </div>
+<%--                    <div class="form-group">--%>
+<%--                        <div class="col-sm-12">--%>
+<%--                            <h2>HE</h2>--%>
+<%--                            <p>hahahahaa</p>--%>
+<%--                            <p>hahahahaa</p>--%>
+<%--                            <p class="thide">hahahahaa</p>--%>
+<%--                            <button id="btn">Click me</button>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="form-group">--%>
+<%--                        <div class="col-sm-12">--%>
+<%--                            <input  type="text", id="value", value="nachiluong"/>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="form-group">--%>
+<%--                        <div class="col-sm-12">--%>
+<%--                            <p id="ppp">Nothing</p>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="form-group">--%>
+<%--                        <div class="col-sm-12">--%>
+<%--                            <button id="btnValue" onclick="usingValAction()">Click Value</button>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="form-group">--%>
+<%--                         <div class="col-sm-12">--%>
+<%--                             <input type="checkbox" id="checkbox" checked/>--%>
+<%--                         </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="form-group">--%>
+<%--                        <div class="col-sm-12">--%>
+<%--                            <p style="color: red" id="cssMethod1">hahahahahaha</p>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="form-group">--%>
+<%--                        <div class="col-sm-12">--%>
+<%--                            <button id="cssMethod">Change color</button>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="checkbox" id="sex" onchange="change()"/>
+                            <p id="textSex"></p>
                         </div>
-                        <br>
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right"><fmt:message key="label.grammarguideline.upload.image" bundle="${lang}"/></label>
-                            <div class="col-sm-9">
-                                <input type="file" name="file"/>
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label no-padding-right"><fmt:message key="label.guideline.content" bundle="${lang}"/></label>
-                            <div class="col-sm-9">
-                                <input type="text" name="pojo.content"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <input type="submit" class="btn btn-white btn-warning btn-bold" value="<fmt:message key="label.done" bundle="${lang}"/>"/>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script >
+    $(document).ready(function (){
+        hideAllWhenButton();
+        // usingValAction();
+        demoCssMethod()
+        change()
+    });
+    function hideAllWhenButton(){
+        $("#btn").click(function (){
+           $(".thide").hide();
+        });
+    }
+    function usingValAction(){
+        // $('#btnValue').click(function (){
+            var value=$('#value').val();
+            $('#ppp').html(value);
+        // });
+    }
+    function demoCssMethod() {
+        $('#cssMethod').click(function () {
+            $('#cssMethod1').css("color", "blue");
+        });
+    }
+    function change(){
+        if($('#sex').prop('checked')==true){
+            $('#textSex').html('<h1>Male</h1>');
+        }
+        else {
+            $('#textSex').html('<h1>Female</h1>');
+        }
+    }
+</script>
 </body>
 </html>

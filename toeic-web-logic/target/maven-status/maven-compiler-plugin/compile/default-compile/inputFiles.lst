@@ -1,5 +1,8 @@
 E:\Code\JaVa\Tomcat\webtoeic\toeic-web-logic\src\main\java\vn\nacl\web\logic\controller\admin\AdminController.java
+E:\Code\JaVa\Tomcat\webtoeic\toeic-web-logic\src\main\java\vn\nacl\web\logic\command\ListenGuideCommand.java
 E:\Code\JaVa\Tomcat\webtoeic\toeic-web-logic\src\main\java\vn\nacl\web\logic\controller\admin\LoginController.java
 E:\Code\JaVa\Tomcat\webtoeic\toeic-web-logic\src\main\java\vn\nacl\web\logic\command\UserCommand.java
+E:\Code\JaVa\Tomcat\webtoeic\toeic-web-logic\src\main\java\vn\nacl\web\logic\controller\admin\ListenGuidelineController.java
+E:\Code\JaVa\Tomcat\webtoeic\toeic-web-logic\src\main\java\vn\nacl\web\logic\controller\admin\UserController.java
 E:\Code\JaVa\Tomcat\webtoeic\toeic-web-logic\src\main\java\vn\nacl\web\logic\controller\web\HomeController.java
 E:\Code\JaVa\Tomcat\webtoeic\toeic-web-logic\src\main\java\vn\nacl\web\logic\common\WebConstant.java

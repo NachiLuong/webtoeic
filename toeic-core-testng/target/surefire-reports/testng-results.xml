@@ -1,21 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="vn.nacl.core.testng.LoginTest" duration-ms="5298" started-at="2021-08-12T07:58:43Z" finished-at="2021-08-12T07:58:49Z">
+  <suite name="Command line suite" duration-ms="2310" started-at="2021-08-31T14:41:31Z" finished-at="2021-08-31T14:41:33Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="5298" started-at="2021-08-12T07:58:43Z" finished-at="2021-08-12T07:58:49Z">
+    <test name="Command line test" duration-ms="2310" started-at="2021-08-31T14:41:31Z" finished-at="2021-08-31T14:41:33Z">
       <class name="vn.nacl.core.testng.LoginTest">
-        <test-method status="PASS" signature="checkFindRoleByUser()[pri:0, instance:vn.nacl.core.testng.LoginTest@5afa04c]" name="checkFindRoleByUser" duration-ms="5267" started-at="2021-08-12T14:58:43Z" finished-at="2021-08-12T14:58:49Z">
+        <test-method status="PASS" signature="checkFindRoleByUser()[pri:0, instance:vn.nacl.core.testng.LoginTest@5f375618]" name="checkFindRoleByUser" duration-ms="17" started-at="2021-08-31T21:41:33Z" finished-at="2021-08-31T21:41:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkFindRoleByUser -->
-        <test-method status="PASS" signature="checkIsUserExist()[pri:0, instance:vn.nacl.core.testng.LoginTest@5afa04c]" name="checkIsUserExist" duration-ms="9" started-at="2021-08-12T14:58:49Z" finished-at="2021-08-12T14:58:49Z">
+        <test-method status="PASS" signature="checkIsUserExist()[pri:0, instance:vn.nacl.core.testng.LoginTest@5f375618]" name="checkIsUserExist" duration-ms="4" started-at="2021-08-31T21:41:33Z" finished-at="2021-08-31T21:41:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkIsUserExist -->
       </class> <!-- vn.nacl.core.testng.LoginTest -->
+      <class name="vn.nacl.core.testng.ListenGuidelineTest">
+        <test-method status="PASS" signature="initData()[pri:0, instance:vn.nacl.core.testng.ListenGuidelineTest@396a51ab]" name="initData" is-config="true" duration-ms="21" started-at="2021-08-31T21:41:31Z" finished-at="2021-08-31T21:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initData -->
+        <test-method status="PASS" signature="checkApiFindByProperty()[pri:0, instance:vn.nacl.core.testng.ListenGuidelineTest@396a51ab]" name="checkApiFindByProperty" duration-ms="2258" started-at="2021-08-31T21:41:31Z" finished-at="2021-08-31T21:41:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkApiFindByProperty -->
+        <test-method status="PASS" signature="testFindByPropertis()[pri:0, instance:vn.nacl.core.testng.ListenGuidelineTest@396a51ab]" name="testFindByPropertis" duration-ms="0" started-at="2021-08-31T21:41:33Z" finished-at="2021-08-31T21:41:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByPropertis -->
+      </class> <!-- vn.nacl.core.testng.ListenGuidelineTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- vn.nacl.core.testng.LoginTest -->
+  </suite> <!-- Command line suite -->
 </testng-results>

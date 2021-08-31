@@ -1,2 +1,3 @@
 vn\nacl\core\dao\UserDao.class
+vn\nacl\core\dao\ListenGuideLineDao.class
 vn\nacl\core\dao\RoleDao.class

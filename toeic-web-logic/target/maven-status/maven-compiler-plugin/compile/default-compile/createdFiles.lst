@@ -1,5 +1,8 @@
 vn\nacl\web\logic\command\UserCommand.class
 vn\nacl\web\logic\controller\web\HomeController.class
+vn\nacl\web\logic\controller\admin\UserController.class
+vn\nacl\web\logic\command\ListenGuideCommand.class
+vn\nacl\web\logic\common\WebConstant.class
+vn\nacl\web\logic\controller\admin\ListenGuidelineController.class
 vn\nacl\web\logic\controller\admin\LoginController.class
 vn\nacl\web\logic\controller\admin\AdminController.class
-vn\nacl\web\logic\common\WebConstant.class
